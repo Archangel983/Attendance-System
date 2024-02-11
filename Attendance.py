@@ -6,7 +6,7 @@ from datetime import datetime
 
 def search(rfid = 0):
     if rfid != 0:
-        robject=mysql.connect(host = "localhost",user="root", password = "1234",database="ARM")
+        robject=mysql.connect(host = "localhost",user="root", password = "Your_DB_Password",database="Your_DB_Name")
         mycursor=robject.cursor()
         query="select * from MDB where rfid=%s"
         value=(rfid,)
@@ -26,12 +26,7 @@ print(res)
 def load_known_faces():
     # Load images with faces
     images = [
-        "Rishit.jpg",
-        "Abhishek.jpg",
-        "Adhish.jpg",
-        "Meet.jpg",
-        "Varad.jpg",
-        "Shamirul.jpg"
+        "Joe Biden.jpg"
         ]
     known_face_encodings = []
     known_face_names = []
